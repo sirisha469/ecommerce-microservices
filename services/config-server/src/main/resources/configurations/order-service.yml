@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/order_db
+    username: root
+    password: Dhaanvika@19
+  jpa:
+    hibernate:
+      ddl-auto: update
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.add.type.headers: true
+        spring.json.type.mapping: orderConfirmation:com.siri.ecommerce.kafka.OrderConfirmation
+
+server:
+  port: 8070
+
+application:
+  config:
+    customer-url: http://localhost:8090/api/v1/customers
+    payment-url: http://localhost:8060/api/v1/payments
+    product-url: http://localhost:8030/api/v1/products

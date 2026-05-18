@@ -1,0 +1,7 @@
+1. Create a directory e-commerce-app opened in IDE
+2. created resources and services directories
+3. using docker in my project created docker-compose.yml file
+    mysql db connection url -> http://localhost:8082/
+        -> username: root, password: root
+    mongo db connection url -> http://localhost:8081/
+        -> username:passowrd - admin:pass
