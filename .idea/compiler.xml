@@ -9,7 +9,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="notification" />
+        <module name="UserMS" />
         <module name="product" />
+        <module name="auth-service" />
         <module name="discovery" />
         <module name="payment" />
         <module name="gateway" />
@@ -28,6 +30,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="UserMS" options="-parameters" />
+      <module name="auth-service" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="customer" options="-parameters" />
       <module name="discovery" options="-parameters" />

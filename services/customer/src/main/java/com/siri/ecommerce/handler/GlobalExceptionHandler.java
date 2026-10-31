@@ -13,7 +13,7 @@ import java.util.HashMap;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(ClassNotFoundException.class)
+    @ExceptionHandler(CustomerNotFoundException.class)
     public ResponseEntity<String> handle(CustomerNotFoundException exp){
         return ResponseEntity
                 .status(HttpStatus.NOT_FOUND)

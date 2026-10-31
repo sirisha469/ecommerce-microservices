@@ -1,0 +1,21 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/micro-services
+  application:
+    name: auth-service
+
+server:
+  port: 8020
+
+app:
+  keycloak:
+    server-url: http://localhost:8080
+      # users will be stored in this realm
+    realm: micro-services
+    admin:
+      # built-in admin client
+      client-id: micro-services-api
+      client-secret: kA56DasLNN68RcvDvKlZe3Bf1ILu5xzb

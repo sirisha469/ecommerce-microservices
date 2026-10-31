@@ -1,0 +1,21 @@
+server:
+  port: 7071
+spring:
+  application:
+    name: UserMS
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/userms
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Dhaanvika@19
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# Error Constants
+USER_ALREADY_EXISTS: User already exists.
+INVALID_CREDENTIALS: Invalid Credentials.
+USER_NOT_FOUND: User not found.
